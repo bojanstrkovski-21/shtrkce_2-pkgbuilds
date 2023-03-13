@@ -1,0 +1,11 @@
+#!/usr/bin/bash
+
+makepkg
+
+mv *.zst /home/bojanstrko/Shtrkce-pkgbuilds/shtrkce-repo/x86_64/
+
+rm -r -rf pkg src shtrkce_2-cinamon-config
+
+cd /home/bojanstrko/Shtrkce-pkgbuilds/shtrkce-repo/x86_64/
+
+./update_repo.sh
